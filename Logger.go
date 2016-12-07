@@ -2,6 +2,7 @@ package Logger
 
 import(
 	"os"
+
 	"github.com/op/go-logging"
 )
 
@@ -10,7 +11,7 @@ var syslogID = "INSERT_YOUR_SISLOGID_PLEASE"
 
 func Init(customSyslogID, loggerName, formatString string) {
 
-	if formatString == mil || len(formatString) <= 0 {
+	if len(formatString) <= 0 {
 		formatString = "%{module} %{shortfile} > %{level:.7s} > %{message}"
 	}
 
